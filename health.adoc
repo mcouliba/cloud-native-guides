@@ -119,7 +119,7 @@ web         1          1         1         config,image(web:latest)
 
 TIP: **dc** stands for deployment config
 
-`*Add a Liveness Probe on the Catalog Deployment Config*`:
+Add a Liveness Probe on the Catalog Deployment Config:
 
 ----
 $ oc set probe dc/catalog --liveness --initial-delay-seconds=30 --failure-threshold=3 --get-url=http://:8080/health
